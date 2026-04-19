@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nowoczesna aplikacja do szyfrowania tekstu">
+    <title>Kryptografia | Aplikacja Szyfrująca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-overlay">
+        <div class="bg-shape bg-primary"></div>
+        <div class="bg-shape bg-secondary"></div>
+    </div>
+    
+    <div class="app-container">
+        <header>
+            <h1>Szyfrator Premium</h1>
+            <p>Zabezpiecz swoje wiadomości używając klasycznych algorytmów</p>
+        </header>
+
+        <main class="content-card">
+            <div class="form-group">
+                <label for="cipher-select">Wybierz algorytm</label>
+                <select id="cipher-select">
+                    <option value="caesar">Szyfr Cezara</option>
+                    <option value="vigenere">Szyfr Vigenère'a</option>
+                    <option value="transposition">Szyfr Przestawieniowy (Kolumnowy)</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="key-wrapper">
+                <label for="key-input" id="key-label">Przesunięcie (liczba)</label>
+                <input type="text" id="key-input" placeholder="Np. 3">
+            </div>
+
+            <div class="form-group">
+                <label for="message-input">Wiadomość</label>
+                <textarea id="message-input" placeholder="Wprowadź tekst do zaszyfrowania..."></textarea>
+            </div>
+
+            <button id="btn-encrypt" class="btn-primary">Zaszyfruj</button>
+
+            <div class="result-group">
+                <label for="result-text">Wynik</label>
+                <div id="result-text" class="result-display">Tutaj pojawi się wynik...</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
